@@ -81,6 +81,7 @@ class MyCustomFormState extends State<citizenForm> {
                            )
                        ),
                        labelText: 'Prenom : ',
+                        labelStyle: TextStyle(color:themeSecondaryColor )
 
                    ),
                    validator: (value) {
@@ -106,7 +107,9 @@ class MyCustomFormState extends State<citizenForm> {
                       color: themeLightColor,
                       )
                       ),
-                       labelText: 'Nom : '
+                       labelText: 'Nom : ',
+                       labelStyle: TextStyle(color:themeSecondaryColor )
+
                    ),
                    validator: (value) {
                      if (value.isEmpty) {
@@ -133,7 +136,9 @@ class MyCustomFormState extends State<citizenForm> {
                       color: themeLightColor,
                         )
                       ),
-                       labelText: 'Adresse : '
+                       labelText: 'Adresse : ',
+                       labelStyle: TextStyle(color:themeSecondaryColor )
+
                    ),
                    validator: (value) {
                      if (value.isEmpty) {
@@ -159,7 +164,9 @@ class MyCustomFormState extends State<citizenForm> {
                              color: themeLightColor,
                            )
                        ),
-                       labelText: 'CIN : '
+                       labelText: 'CIN : ',
+                       labelStyle: TextStyle(color:themeSecondaryColor )
+
                    ),
                    validator: (value) {
                      if (value.isEmpty) {
@@ -172,7 +179,7 @@ class MyCustomFormState extends State<citizenForm> {
 
                Padding(
                  padding: const EdgeInsets.symmetric(vertical: 10.0) ,
-                 child: Text("Choisir votre raison"),
+                 child: Text("Choisir votre raison",style:TextStyle(color:themeSecondaryColor ),),
                ),
                DropdownButton(
                    value: _currentReason,

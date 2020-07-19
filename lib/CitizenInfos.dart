@@ -29,7 +29,7 @@ class _CitizenInfosState extends State<CitizenInfos> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: themePrimaryColor,
     ),
         backgroundColor: themePrimaryColor,
 
@@ -50,11 +50,11 @@ class _CitizenInfosState extends State<CitizenInfos> {
                            children: <TextSpan>[
                              TextSpan(text: 'Authorize', style: TextStyle(
                                  fontWeight: FontWeight.bold,
-                                 color: Colors.black,
+                                 color: Colors.white,
                                  fontSize: 30)),
                              TextSpan(text: "IT", style: TextStyle(
                                  fontWeight: FontWeight.bold,
-                                 color: Colors.red,
+                                 color: themeSecondaryColor,
                                  fontSize: 30)),
                            ],
                          ),
