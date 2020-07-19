@@ -2,8 +2,7 @@
 import 'dart:convert';
 
 import 'package:authorizeit/models/Citizen.dart';
-import 'package:authorizeit/utils/DBMemory.dart';
-import 'package:authorizeit/utils/dataBaseHelper.dart';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'dart:async';

@@ -1,6 +1,5 @@
 import 'package:authorizeit/CitizenInfos.dart';
 import 'package:authorizeit/citizenForm.dart';
-import 'package:authorizeit/utils/dataBaseHelper.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -12,7 +11,6 @@ void main() => runApp(MaterialApp(
 
 /// This Widget is the main application widget.
 class MyApp extends StatelessWidget {
-  DataBaseHelper dataBaseHelper=DataBaseHelper();
 
   @override
   Widget build(BuildContext context) {
