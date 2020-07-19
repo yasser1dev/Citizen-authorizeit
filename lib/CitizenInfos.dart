@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
+import 'package:authorizeit/Shared/Constants.dart';
 
 class CitizenInfos extends StatefulWidget {
 
@@ -30,7 +31,9 @@ class _CitizenInfosState extends State<CitizenInfos> {
         appBar: AppBar(
         backgroundColor: Colors.black,
     ),
-    body: SafeArea(
+        backgroundColor: themePrimaryColor,
+
+        body: SafeArea(
         child:FutureBuilder(
         builder: (context,snapshot){
            if(snapshot.connectionState==ConnectionState.none && snapshot.data==null){
@@ -65,9 +68,9 @@ class _CitizenInfosState extends State<CitizenInfos> {
                            .style,
                        children: <TextSpan>[
                          TextSpan(text: 'Nom : ', style: TextStyle(
-                             fontWeight: FontWeight.bold, fontSize: 20)),
+                             fontWeight: FontWeight.bold, fontSize: 20,color: themeSecondaryColor)),
                          TextSpan(text: infos["nom"], style: TextStyle(
-                             fontSize: 20)),
+                             fontSize: 20,color: themeSecondaryColor)),
                        ],
                      ),
                    ),),
@@ -78,9 +81,9 @@ class _CitizenInfosState extends State<CitizenInfos> {
                            .style,
                        children: <TextSpan>[
                          TextSpan(text: 'Prenom  : ', style: TextStyle(
-                             fontWeight: FontWeight.bold, fontSize: 20)),
+                             fontWeight: FontWeight.bold, fontSize: 20,color: themeSecondaryColor)),
                          TextSpan(text: infos["prenom"], style: TextStyle(
-                             fontSize: 20)),
+                             fontSize: 20,color: themeSecondaryColor)),
                        ],
                      ),
                    ),),
@@ -91,9 +94,9 @@ class _CitizenInfosState extends State<CitizenInfos> {
                            .style,
                        children: <TextSpan>[
                          TextSpan(text: 'Adresse  : ', style: TextStyle(
-                             fontWeight: FontWeight.bold, fontSize: 20)),
+                             fontWeight: FontWeight.bold, fontSize: 20,color: themeSecondaryColor)),
                          TextSpan(text: infos["adresse"], style: TextStyle(
-                             fontSize: 20)),
+                             fontSize: 20,color: themeSecondaryColor)),
                        ],
                      ),
                    ),),
@@ -104,9 +107,9 @@ class _CitizenInfosState extends State<CitizenInfos> {
                            .style,
                        children: <TextSpan>[
                          TextSpan(text: 'CIN  : ', style: TextStyle(
-                             fontWeight: FontWeight.bold, fontSize: 20)),
+                             fontWeight: FontWeight.bold, fontSize: 20,color: themeSecondaryColor)),
                          TextSpan(text: infos["cin"], style: TextStyle(
-                             fontSize: 20)),
+                             fontSize: 20,color: themeSecondaryColor)),
                        ],
                      ),
                    ),),
@@ -116,10 +119,10 @@ class _CitizenInfosState extends State<CitizenInfos> {
                            .of(context)
                            .style,
                        children: <TextSpan>[
-                         TextSpan(text: 'Raison  : ', style: TextStyle(
+                         TextSpan(text: 'Raison  : ', style: TextStyle(color: themeSecondaryColor,
                              fontWeight: FontWeight.bold, fontSize: 20)),
                          TextSpan(text: listRaison[int.parse(infos["raison"]) -
-                             1], style: TextStyle(fontSize: 20)),
+                             1], style: TextStyle(fontSize: 20,color: themeSecondaryColor)),
                        ],
                      ),
                    ),),
@@ -127,7 +130,7 @@ class _CitizenInfosState extends State<CitizenInfos> {
                    width: MediaQuery.of(context).size.width * 0.7,
                      child: Padding(padding: const EdgeInsets.all(20.0),
                          child:RaisedButton(
-                           color: Colors.black,
+                           color: themeSecondaryColor,
                            shape: RoundedRectangleBorder(
                              borderRadius: BorderRadius.circular(18.0),
                            ),

@@ -2,7 +2,7 @@ import 'package:authorizeit/CitizenInfos.dart';
 import 'package:authorizeit/citizenForm.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
+import 'package:authorizeit/Shared/Constants.dart';
 void main() => runApp(MaterialApp(
   title: "App",
   home: MyApp(),
@@ -49,6 +49,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       appBar: AppBar(
         backgroundColor: Colors.black,
       ),
+      backgroundColor: themePrimaryColor,
       body: Center(
         child:Column(
           children: [
@@ -57,8 +58,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 child:RichText(
                   text: TextSpan(
                     children: <TextSpan>[
-                      TextSpan(text: 'Authorize', style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black,fontSize: 30)),
-                      TextSpan(text: "IT",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.red,fontSize: 30)),
+                      TextSpan(text: 'Authorize', style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 30)),
+                      TextSpan(text: "IT",style: TextStyle(fontWeight: FontWeight.bold,color: themeSecondaryColor,fontSize: 30)),
                     ],
                   ),
                 ),
@@ -71,7 +72,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(18.0),
                         ),
-                    color: Colors.black,
+                    color: themeSecondaryColor,
                     child: Text("Afficher mon document",style: TextStyle(color: Colors.white),),
                     onPressed: () {
                       Navigator.push(context,MaterialPageRoute(builder: (context)=>CitizenInfos()));

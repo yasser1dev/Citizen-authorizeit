@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
+import 'Shared/Constants.dart';
+
 class QrCodeWidget extends StatefulWidget {
 
   static Map<String,dynamic> citizenData;
@@ -20,7 +22,8 @@ class _QrCodeWidgetState extends State<QrCodeWidget> {
       appBar: AppBar(
         backgroundColor: Colors.black,
       ),
-      body: SafeArea(
+        backgroundColor: themeLightColor,
+        body: SafeArea(
           child:Center(
             child: Column(
               children: [
