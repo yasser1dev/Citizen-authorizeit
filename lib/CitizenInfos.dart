@@ -70,7 +70,7 @@ class _CitizenInfosState extends State<CitizenInfos> {
                          TextSpan(text: 'Nom : ', style: TextStyle(
                              fontWeight: FontWeight.bold, fontSize: 20,color: themeSecondaryColor)),
                          TextSpan(text: infos["nom"], style: TextStyle(
-                             fontSize: 20,color: themeSecondaryColor)),
+                             fontSize: 20,color: Colors.white)),
                        ],
                      ),
                    ),),
@@ -83,7 +83,7 @@ class _CitizenInfosState extends State<CitizenInfos> {
                          TextSpan(text: 'Prenom  : ', style: TextStyle(
                              fontWeight: FontWeight.bold, fontSize: 20,color: themeSecondaryColor)),
                          TextSpan(text: infos["prenom"], style: TextStyle(
-                             fontSize: 20,color: themeSecondaryColor)),
+                             fontSize: 20,color: Colors.white)),
                        ],
                      ),
                    ),),
@@ -96,7 +96,7 @@ class _CitizenInfosState extends State<CitizenInfos> {
                          TextSpan(text: 'Adresse  : ', style: TextStyle(
                              fontWeight: FontWeight.bold, fontSize: 20,color: themeSecondaryColor)),
                          TextSpan(text: infos["adresse"], style: TextStyle(
-                             fontSize: 20,color: themeSecondaryColor)),
+                             fontSize: 20,color: Colors.white)),
                        ],
                      ),
                    ),),
@@ -109,7 +109,7 @@ class _CitizenInfosState extends State<CitizenInfos> {
                          TextSpan(text: 'CIN  : ', style: TextStyle(
                              fontWeight: FontWeight.bold, fontSize: 20,color: themeSecondaryColor)),
                          TextSpan(text: infos["cin"], style: TextStyle(
-                             fontSize: 20,color: themeSecondaryColor)),
+                             fontSize: 20,color: Colors.white)),
                        ],
                      ),
                    ),),
@@ -122,7 +122,7 @@ class _CitizenInfosState extends State<CitizenInfos> {
                          TextSpan(text: 'Raison  : ', style: TextStyle(color: themeSecondaryColor,
                              fontWeight: FontWeight.bold, fontSize: 20)),
                          TextSpan(text: listRaison[int.parse(infos["raison"]) -
-                             1], style: TextStyle(fontSize: 20,color: themeSecondaryColor)),
+                             1], style: TextStyle(fontSize: 20,color: Colors.white)),
                        ],
                      ),
                    ),),
@@ -130,6 +130,7 @@ class _CitizenInfosState extends State<CitizenInfos> {
                    width: MediaQuery.of(context).size.width * 0.7,
                      child: Padding(padding: const EdgeInsets.all(20.0),
                          child:RaisedButton(
+                           
                            color: themeSecondaryColor,
                            shape: RoundedRectangleBorder(
                              borderRadius: BorderRadius.circular(18.0),

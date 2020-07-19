@@ -61,27 +61,28 @@ class MyCustomFormState extends State<citizenForm> {
                  Padding(
                    padding: const EdgeInsets.symmetric(vertical: 5.0),
                    child:Text(
-                       "Veuillez Remplir ce formulaire",style: TextStyle(color: themeSecondaryColor),
+                       "Veuillez Remplir ce formulaire",style: TextStyle(color: Colors.white),
                    ),
                  ),
                ),
                Padding(
                  padding: const EdgeInsets.symmetric(vertical: 5.0),
                  child:TextFormField(
+                   style: TextStyle(color:Colors.white),
                    controller: _name,
                    decoration: InputDecoration(
                        contentPadding: EdgeInsets.only(left: 14.0, bottom: 12.0, top: 0.0),
                        enabledBorder: new OutlineInputBorder(
-                         borderSide:BorderSide(color: themeSecondaryColor) , borderRadius: const BorderRadius.all(const Radius.circular(20.0))
+                         borderSide:BorderSide(color: Colors.white) , borderRadius: const BorderRadius.all(const Radius.circular(20.0))
                        ),
                        focusedBorder: OutlineInputBorder(
                            borderRadius: BorderRadius.circular(20),
                            borderSide: BorderSide(
-                             color: themeLightColor,
+                             color: Colors.white,
                            )
                        ),
                        labelText: 'Prenom : ',
-                        labelStyle: TextStyle(color:themeSecondaryColor )
+                        labelStyle: TextStyle(color:Colors.white )
 
                    ),
                    validator: (value) {
@@ -95,10 +96,11 @@ class MyCustomFormState extends State<citizenForm> {
                Padding(
                  padding: const EdgeInsets.symmetric(vertical: 5.0),
                  child:TextFormField(
+                   style: TextStyle(color:Colors.white),
                    controller: _lastname,
                    decoration: InputDecoration(
                        contentPadding: EdgeInsets.only(left: 14.0, bottom: 12.0, top: 0.0),
-                       enabledBorder: new OutlineInputBorder(borderSide:BorderSide(color: themeSecondaryColor),
+                       enabledBorder: new OutlineInputBorder(borderSide:BorderSide(color: Colors.white),
                            borderRadius: const BorderRadius.all(const Radius.circular(20.0))
                        ),
                       focusedBorder: OutlineInputBorder(
@@ -108,7 +110,7 @@ class MyCustomFormState extends State<citizenForm> {
                       )
                       ),
                        labelText: 'Nom : ',
-                       labelStyle: TextStyle(color:themeSecondaryColor )
+                       labelStyle: TextStyle(color:Colors.white )
 
                    ),
                    validator: (value) {
@@ -123,10 +125,11 @@ class MyCustomFormState extends State<citizenForm> {
                Padding(
                  padding: const EdgeInsets.symmetric(vertical: 5.0),
                  child: TextFormField(
+                   style: TextStyle(color:Colors.white),
                    controller: _adresse,
                    decoration: InputDecoration(
                        contentPadding: EdgeInsets.only(left: 14.0, bottom: 12.0, top: 0.0),
-                       enabledBorder: new OutlineInputBorder(borderSide:BorderSide(color: themeSecondaryColor),
+                       enabledBorder: new OutlineInputBorder(borderSide:BorderSide(color: Colors.white),
                            borderRadius: const BorderRadius.all(const Radius.circular(20.0))
                        ),
 
@@ -137,7 +140,7 @@ class MyCustomFormState extends State<citizenForm> {
                         )
                       ),
                        labelText: 'Adresse : ',
-                       labelStyle: TextStyle(color:themeSecondaryColor )
+                       labelStyle: TextStyle(color:Colors.white )
 
                    ),
                    validator: (value) {
@@ -152,10 +155,11 @@ class MyCustomFormState extends State<citizenForm> {
                Padding(
                  padding: const EdgeInsets.symmetric(vertical: 5.0),
                  child:TextFormField(
+                   style: TextStyle(color:Colors.white),
                    controller: _cin,
                    decoration: InputDecoration(
                        contentPadding: EdgeInsets.only(left: 14.0, bottom: 12.0, top: 0.0),
-                       enabledBorder: new OutlineInputBorder(borderSide:BorderSide(color: themeSecondaryColor),
+                       enabledBorder: new OutlineInputBorder(borderSide:BorderSide(color: Colors.white),
                            borderRadius: const BorderRadius.all(const Radius.circular(20.0))
                        ),
                        focusedBorder: OutlineInputBorder(
@@ -165,7 +169,7 @@ class MyCustomFormState extends State<citizenForm> {
                            )
                        ),
                        labelText: 'CIN : ',
-                       labelStyle: TextStyle(color:themeSecondaryColor )
+                       labelStyle: TextStyle(color:Colors.white )
 
                    ),
                    validator: (value) {
@@ -179,9 +183,10 @@ class MyCustomFormState extends State<citizenForm> {
 
                Padding(
                  padding: const EdgeInsets.symmetric(vertical: 10.0) ,
-                 child: Text("Choisir votre raison",style:TextStyle(color:themeSecondaryColor ),),
+                 child: Text("Choisir votre raison",style:TextStyle(color:Colors.white ),),
                ),
                DropdownButton(
+                   style: TextStyle(color:themeSecondaryColor),
                    value: _currentReason,
                    items: reasonsData.map((item){
                      return DropdownMenuItem(

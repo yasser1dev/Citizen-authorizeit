@@ -50,28 +50,30 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         backgroundColor: themePrimaryColor,
       ),
       backgroundColor: themePrimaryColor,
-      body: Center(
-        child:Column(
-          children: [
-            Padding(
-                padding: const EdgeInsets.all(16.0) ,
-                child:RichText(
-                  text: TextSpan(
-                    children: <TextSpan>[
-                      TextSpan(text: 'Authorize', style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 30)),
-                      TextSpan(text: "IT",style: TextStyle(fontWeight: FontWeight.bold,color: themeSecondaryColor,fontSize: 30)),
-                    ],
+      body: SingleChildScrollView(
+        child: ConstrainedBox(constraints: BoxConstraints(),
+        child: Center(
+            child:Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(16.0) ,
+                  child:RichText(
+                    text: TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(text: 'Authorize', style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 30)),
+                        TextSpan(text: "IT",style: TextStyle(fontWeight: FontWeight.bold,color: themeSecondaryColor,fontSize: 30)),
+                      ],
+                    ),
                   ),
                 ),
-            ),
                 citizenForm(),
                 SizedBox(
                   height: 35,
                   width: MediaQuery.of(context).size.width * 0.7,
                   child:RaisedButton(
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18.0),
-                        ),
+                      borderRadius: BorderRadius.circular(18.0),
+                    ),
                     color: themeSecondaryColor,
                     child: Text("Afficher mon document",style: TextStyle(color: Colors.white),),
                     onPressed: () {
@@ -80,9 +82,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     ,) ,
                 )
 
-          ],
-        )
-        ),
+              ],
+            )
+        ),),
+      )
 
     );
   }
